@@ -18,15 +18,15 @@ import java.util.Map;
 @Controller
 public class PostController {
 
-    private Post post;
+
     PostController(){
 
-        post = new Post("racheal");
+
     }
     @RequestMapping(value="/", method= RequestMethod.GET)
     public String renderPost(Map<String, Object> model) {
-        model.put("myObjPost", post.toString());
-        return "post";
+
+        return null;
     }
 
 
@@ -35,7 +35,7 @@ public class PostController {
         headers = {"Accept=application/xml"})
                 @ResponseBody
         public String xmlPost(){
-            return "<?xml version=\"1.0\" encoding = \"utf-8\"?><post><content>"+post+"</content></post>";
+            return "<?xml version=\"1.0\" encoding = \"utf-8\"?><post><content>"+"</content></post>";
         }
 
     }
